@@ -1,8 +1,7 @@
-<!-- Replace your-device-ID-goes-here with your actual device ID
-and replace your-access-token-goes-here with your actual access token-->
-<!DOCTYPE>
+<!DOCTYPE html>
 <html>
 <head>
+    <link href="style.css" rel="stylesheet" type="text/css" />
     <script src="controlCodeCottonV1.js"></script>
   <title>
     Cart Command
@@ -12,13 +11,15 @@ and replace your-access-token-goes-here with your actual access token-->
   
     <br>
     <br>
-    <button onclick="goForwd();">go forward</button><br>
-    <button onclick="allStop();">All stop</button>
+    <div class="center"><button class="lgButton" onclick="driveForward3Sec();">go forward for 3 seconds</button></div><br>
+    <div class="center"><button class="button" onclick="allStop();">All stop</button></div>
     <br>
-    <button onclick="turnLeft();">turn left</button>
-    <button onclick="turnRight();">turn right</button>
+    
+    <button class="button" onclick="limitedLeftTurn();">turn left</button>
+    
+    <button class="button" onclick="limitedRightTurn()();">turn right</button>
     <br>
-    <button onclick="allRev();">all reverse</button>
+    <div class="center"><button class="lgButton" onclick="driveReverse3Sec();">all reverse for 3 seconds</button></div>
     <br>
     
   <script>

@@ -1,0 +1,40 @@
+body{
+    background-image: linear-gradient(90deg, white, #2eacd4 100%);
+}
+
+.button {
+    background-color: white;
+    width: 150px;
+    height: 30px;
+    border-color: lightblue;
+    border-radius: 12px;
+}
+
+.lgButton {
+    background-color: white;
+    width: 250px;
+    height: 30px;
+    border-color: lightblue;
+    border-radius: 12px;
+}
+
+.center {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.right {
+    display: flex;
+  justify-content: right;
+  align-items: center;
+  height: 200px;
+}
+
+.left {
+    display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 200px;
+}

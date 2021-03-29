@@ -32,3 +32,32 @@ function goForwd() {
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send("value=allRev");
   }
+
+  function driveForward3Sec() {
+    goForwd();
+    setTimeout(function() {
+      allStop();
+    }, 3000);
+  }
+
+  function limitedRightTurn() {
+    turnRight();
+    setTimeout(function() {
+      allStop();
+    }, 500);
+  }
+
+  function limitedLeftTurn() {
+    turnLeft();
+    setTimeout(function() {
+      allStop();
+    }, 500);
+  }
+
+  function driveReverse3Sec() {
+    allRev();
+    setTimeout(function() {
+      allStop();
+    }, 3000);
+
+  }

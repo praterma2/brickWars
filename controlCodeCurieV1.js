@@ -33,31 +33,17 @@ function goForwd() {
     xhttp.send("value=allRev");
   }
 
-  function driveForward3Sec() {
-    goForwd();
-    setTimeout(function() {
-      allStop();
-    }, 3000);
+  function auxMotorForwd() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("POST", "https://api.particle.io/v1/devices/210037000347363339343638/cartKommand?access_token=730d17457669375efa9789faa441ab1448beff1b", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send("value=motor3Forwd");
   }
 
-  function limitedRightTurn() {
-    turnRight();
-    setTimeout(function() {
-      allStop();
-    }, 500);
+  function auxMotorRev() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("POST", "https://api.particle.io/v1/devices/210037000347363339343638/cartKommand?access_token=730d17457669375efa9789faa441ab1448beff1b", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send("value=motor3Rev");
   }
-
-  function limitedLeftTurn() {
-    turnLeft();
-    setTimeout(function() {
-      allStop();
-    }, 500);
-  }
-
-  function driveReverse3Sec() {
-    allRev();
-    setTimeout(function() {
-      allStop();
-    }, 3000);
-
-  }
+  

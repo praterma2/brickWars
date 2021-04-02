@@ -12,76 +12,37 @@ function goForwd() {
     xhttp.send("value=allStop");
   }
 
-  function turnOnB() {
+  function turnLeft() {
     var xhttp = new XMLHttpRequest();
-    xhttp.open("POST", "https://api.particle.io/v1/devices/310036000e47353136383631/led?access_token=80c17219383160eb931780655d9984958a4414d5", true);
+    xhttp.open("POST", "https://api.particle.io/v1/devices/2d003a000a47363339343638/cartKommand?access_token=730d17457669375efa9789faa441ab1448beff1b", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send("value=onB");
+    xhttp.send("value=turnLeft");
   }
 
-  function turnOffB() {
+  function turnRight() {
     var xhttp = new XMLHttpRequest();
-    xhttp.open("POST", "https://api.particle.io/v1/devices/310036000e47353136383631/led?access_token=80c17219383160eb931780655d9984958a4414d5", true);
+    xhttp.open("POST", "https://api.particle.io/v1/devices/2d003a000a47363339343638/cartKommand?access_token=730d17457669375efa9789faa441ab1448beff1b", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send("value=offB");
+    xhttp.send("value=turnRight");
   }
 
-  function turnOnC() {
+  function allRev() {
     var xhttp = new XMLHttpRequest();
-    xhttp.open("POST", "https://api.particle.io/v1/devices/310036000e47353136383631/led?access_token=80c17219383160eb931780655d9984958a4414d5", true);
+    xhttp.open("POST", "https://api.particle.io/v1/devices/2d003a000a47363339343638/cartKommand?access_token=730d17457669375efa9789faa441ab1448beff1b", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send("value=onC");
+    xhttp.send("value=allRev");
   }
 
-  function turnOffC() {
+  function auxMotorForwd() {
     var xhttp = new XMLHttpRequest();
-    xhttp.open("POST", "https://api.particle.io/v1/devices/310036000e47353136383631/led?access_token=80c17219383160eb931780655d9984958a4414d5", true);
+    xhttp.open("POST", "https://api.particle.io/v1/devices/2d003a000a47363339343638/cartKommand?access_token=730d17457669375efa9789faa441ab1448beff1b", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send("value=offC");
+    xhttp.send("value=motor3Forwd");
   }
 
-  function turnOnD() {
+  function auxMotorRev() {
     var xhttp = new XMLHttpRequest();
-    xhttp.open("POST", "https://api.particle.io/v1/devices/310036000e47353136383631/led?access_token=80c17219383160eb931780655d9984958a4414d5", true);
+    xhttp.open("POST", "https://api.particle.io/v1/devices/2d003a000a47363339343638/cartKommand?access_token=730d17457669375efa9789faa441ab1448beff1b", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send("value=onD");
-  }
-
-  function turnOffD() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("POST", "https://api.particle.io/v1/devices/310036000e47353136383631/led?access_token=80c17219383160eb931780655d9984958a4414d5", true);
-    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send("value=offD");
-  }
-
-  function crazy() {
-    turnOffA();
-    turnOffB();
-    turnOffC();
-    turnOffD();
-    setTimeout(function() {
-        turnOnD();
-    }, 4000);
-    setTimeout(function() {
-        turnOnB();
-    }, 6000);
-    setTimeout(function() {
-        turnOnC();
-    }, 8000);
-    setTimeout(function() {
-        turnOnA();
-    }, 10000);
-    setTimeout(function() {
-        turnOffD();
-        turnOffA();
-        turnOffB();
-        turnOffC();
-    }, 20000);
-  }
-
-  function allOn() {
-    turnOnA();
-    turnOnB();
-    turnOnC();
-    turnOnD();
+    xhttp.send("value=motor3Rev");
   }
